@@ -12,7 +12,7 @@ class DesignPart extends StatefulWidget {
 }
 
 class _DesignPartState extends State<DesignPart> {
-  String activeScreen = "start-screen";
+  String activeScreen = "start-screenn";
 
   void nextPg() {
     setState(() {
@@ -26,7 +26,7 @@ class _DesignPartState extends State<DesignPart> {
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 81, 20, 142),
         body: Center(
-          child: activeScreen == "start-screen"
+          child: activeScreen == "start-screenn"
               ? StartScreen(nextPg)
               : const QuizScreen2(),
         ),
