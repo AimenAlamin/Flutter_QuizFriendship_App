@@ -12,27 +12,29 @@ class DesignPart extends StatefulWidget {
 }
 
 class _DesignPartState extends State<DesignPart> {
-  Widget? activeScreen;
-
-  @override
-  void initState() {
-    super.initState();
-    activeScreen = StartScreen(nextPg);
-  }
+  var activeScreen = "start-screen";
 
   void nextPg() {
     setState(() {
-      activeScreen = const QuizScreen2();
+      activeScreen = "quiz-screen";
     });
   }
 
   @override
   Widget build(context) {
+    Widget? displayScreen;
+
+    if (activeScreen == "start-screen") {
+      displayScreen = StartScreen(nextPg);
+    } else {
+      displayScreen = const QuizScreen2();
+    }
+
     return MaterialApp(
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 81, 20, 142),
         body: Center(
-          child: activeScreen,
+          child: displayScreen,
         ),
       ),
     );
