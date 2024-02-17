@@ -7,12 +7,12 @@ const qNa = [
     ["Coffe", "Cola", "Tea", "Fresh Juice"],
   ),
   QuizQuestions(
-    "What's my favourite team?",
-    ["Al Ahly", "Al Nasser", "Al Hilal", "Al Ittahid"],
+    "Whose my favourite artist?",
+    ["Nipsey Hussle", "Drake", "The Weekned", "Lil Baby"],
   ),
   QuizQuestions(
-    "Whose's my favourite artist?",
-    ["Nipsey Hussle", "Drake", "The Weekned", "Lil Baby"],
+    "What's my favourite team?",
+    ["Al Ahly", "Al Nasser", "Al Hilal", "Al Ittahid"],
   ),
   QuizQuestions(
     "I spend most of my money in?",
@@ -23,11 +23,11 @@ const qNa = [
     ["Series", "Movies", "Realty Shows", "Podcasts"],
   ),
   QuizQuestions(
-    "When I face a problem what do I do?",
-    ["Sleep", "Cry", "Ask For Help", "Face It"],
+    "First thing I do when I have a problem?",
+    ["Sleep", "Cry", "Ask For Help", "Face it"],
   ),
   QuizQuestions(
-    "What's the first thing I do when I wake up?",
+    "First thing I do when I wake up?",
     ["Push Ups", "Fix My Hair", "Sleep", "Check My Phone"],
   ),
 ];

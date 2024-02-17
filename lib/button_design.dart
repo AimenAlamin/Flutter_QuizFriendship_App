@@ -15,13 +15,14 @@ class ButtonDesign extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color.fromARGB(255, 32, 0, 64),
           foregroundColor: Colors.white,
-          fixedSize: const Size(200, 45),
+          fixedSize: const Size(250, 45),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
           ),
         ),
         child: Text(
           text,
+          textAlign: TextAlign.center,
           style: const TextStyle(fontSize: 20),
         ),
       ),

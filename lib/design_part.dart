@@ -32,6 +32,19 @@ class _DesignPartState extends State<DesignPart> {
 
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: const Color.fromARGB(255, 81, 20, 142),
+          title: const Text(
+            "How Much You Know Me Quiz",
+            style: TextStyle(
+              fontSize: 25,
+              color: Color.fromARGB(255, 255, 255, 255),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          centerTitle: true,
+          elevation: 30,
+        ),
         backgroundColor: const Color.fromARGB(255, 81, 20, 142),
         body: Center(
           child: displayScreen,
