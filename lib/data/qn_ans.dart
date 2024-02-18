@@ -15,10 +15,6 @@ const qNa = [
     ["Al Ahly", "Al Nasser", "Al Hilal", "Al Ittahid"],
   ),
   QuizQuestions(
-    "I spend most of my money in?",
-    ["Clothes", "Hair Products", "Fast Food", "Online Courses"],
-  ),
-  QuizQuestions(
     "What do I like to watch most?",
     ["Series", "Movies", "Realty Shows", "Podcasts"],
   ),

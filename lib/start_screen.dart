@@ -18,14 +18,14 @@ class StartScreen extends StatelessWidget {
           height: 50,
         ),
         const Text(
-          "Learn Flutter the fun way!",
+          "How much you know me!",
           style: TextStyle(fontSize: 23, color: Colors.white),
         ),
         const SizedBox(
           height: 23,
         ),
         OutlinedButton.icon(
-          onPressed: startQuiz,
+          onPressed: startQuiz, //onPress here will go to QuizScreen
           style: OutlinedButton.styleFrom(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),

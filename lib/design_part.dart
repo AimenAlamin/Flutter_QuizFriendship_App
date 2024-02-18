@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:trail_app3/data/qn_ans.dart';
 import 'package:trail_app3/quiz_screen2.dart';
+import 'package:trail_app3/result_screen.dart';
 import 'package:trail_app3/start_screen.dart';
 
 class DesignPart extends StatefulWidget {
@@ -13,6 +15,36 @@ class DesignPart extends StatefulWidget {
 
 class _DesignPartState extends State<DesignPart> {
   var activeScreen = "start-screen";
+  int correct = 0;
+  List<String> storeAnswer = [];
+
+  void result(String chosenAnswer) {
+    storeAnswer.add(
+        chosenAnswer); //from the quiz screen we trigger a pointer to this function and then it be executed
+
+    if (storeAnswer.length == qNa.length) {
+      //iterate through the list
+      for (int i = 0; i < storeAnswer.length; i++) {
+        //compare if user answer == first answer(correct answer) then increament correctAns
+        if (storeAnswer[i] == qNa[i].answers[0]) {
+          correct++;
+        }
+      }
+      setState(() {
+        // I put this inside the if conditon which is no.of ans equal to no.of qns. then go to result screen
+        activeScreen = "result-screen";
+      });
+    }
+  }
+
+  void restart() {
+    storeAnswer = [];
+    correct = 0;
+
+    setState(() {
+      activeScreen = "start-screen";
+    });
+  }
 
   void nextPg() {
     setState(() {
@@ -25,9 +57,13 @@ class _DesignPartState extends State<DesignPart> {
     Widget? displayScreen;
 
     if (activeScreen == "start-screen") {
-      displayScreen = StartScreen(nextPg);
+      displayScreen = StartScreen(
+          nextPg); //passing a pointer of my function so that in startScreen onPressed the function is executed
+    } else if (activeScreen == "quiz-screen") {
+      displayScreen = QuizScreen2(onAnsPick: result);
     } else {
-      displayScreen = const QuizScreen2();
+      displayScreen =
+          ResultScreen(correctAnswers: correct, onRestartTap: restart);
     }
 
     return MaterialApp(
@@ -35,7 +71,7 @@ class _DesignPartState extends State<DesignPart> {
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 81, 20, 142),
           title: const Text(
-            "How Much You Know Me Quiz",
+            "Quiz Friendship",
             style: TextStyle(
               fontSize: 25,
               color: Color.fromARGB(255, 255, 255, 255),

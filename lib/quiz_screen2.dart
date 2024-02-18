@@ -3,7 +3,8 @@ import 'package:trail_app3/button_design.dart';
 import 'package:trail_app3/data/qn_ans.dart';
 
 class QuizScreen2 extends StatefulWidget {
-  const QuizScreen2({super.key});
+  const QuizScreen2({required this.onAnsPick, super.key});
+  final void Function(String answer) onAnsPick;
   @override
   State<QuizScreen2> createState() {
     return _QuizScreen2State();
@@ -12,7 +13,8 @@ class QuizScreen2 extends StatefulWidget {
 
 class _QuizScreen2State extends State<QuizScreen2> {
   int counter = 0;
-  void changeQn() {
+  void changeQn(String answer) {
+    widget.onAnsPick(answer);
     setState(() {
       counter++;
     });
@@ -21,6 +23,7 @@ class _QuizScreen2State extends State<QuizScreen2> {
   @override
   Widget build(BuildContext context) {
     final currentQuestion = qNa[counter];
+
     return Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -37,8 +40,12 @@ class _QuizScreen2State extends State<QuizScreen2> {
             ),
           ),
           ...currentQuestion.getShuffle().map((ans) {
-            return ButtonDesign(text: ans, onTap: changeQn);
-          })
+            return ButtonDesign(
+                text: ans,
+                onTap: () {
+                  changeQn(ans);
+                });
+          }),
         ],
       ),
     );
