@@ -1,16 +1,8 @@
-# trail_app3
+Quiz Friendship App, where user answer 6 questions and show the result how much you know your friend
+![image](https://github.com/AimenAlamin/Flutter_QuizFriendship_App/assets/154593969/a4edee57-2ca9-4bd3-8226-c8f90b7a6b69)
 
-A new Flutter project.
+![image](https://github.com/AimenAlamin/Flutter_QuizFriendship_App/assets/154593969/904a544d-10ec-4c1c-a5a9-8d77821097b8)
 
-## Getting Started
+![image](https://github.com/AimenAlamin/Flutter_QuizFriendship_App/assets/154593969/030b930c-42cb-47d6-918a-50ac12ed16fc)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
